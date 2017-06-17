@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">LetsBake</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_fooditem_list">FoodItems</string>
+    <string name="title_fooditem_detail">FoodItem Detail</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_message">No Network..Couldn\'t Load Content</string>
+    <string name="fooditem">FoodItem</string>
+    <string name="textview">TextView</string>
+    <string name="Servings">servings</string>
+    <string name="name">name</string>
+    <string name="description">description</string>
+    <string name="our_how_to_make_videos">Our How To Make Videos</string>
+    <string name="serving">Servings</string>
+    <string name="re_fresh">Refresh</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="recipe">reciepe</string>
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/widget_item"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+
+            <ImageView
+                android:id="@+id/widget_iv_chef"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/fooditem"
+                android:scaleType="centerCrop"
+                />
+
+
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <TextView
+                android:id="@+id/widget_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:text="@string/name"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="25sp"
+
+                android:theme="@style/myTextSytle"
+                tools:text="Name" />
+
+            <TextView
+                android:id="@+id/widget_tv_servings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/widget_textView"
+
+                android:layout_toEndOf="@+id/widget_tv_name"
+                android:text="5"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/widget_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/widget_tv_name"
+                android:layout_below="@+id/widget_tv_name"
+                android:text="@string/serving"
+                android:textSize="18sp"
+                tools:text="Servings :" />
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="40dp"
+                android:background="@color/colorAccent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:layout_marginTop="5dp"
+                android:text="Explore"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
