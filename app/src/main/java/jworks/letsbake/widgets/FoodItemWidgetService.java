@@ -22,6 +22,7 @@ import java.util.Arrays;
 import jworks.letsbake.R;
 import jworks.letsbake.Utilities.ImageResources;
 import jworks.letsbake.model.FoodItem;
+import jworks.letsbake.model.Ingredient;
 
 /**
  * Created by CHUKWU JOHNPAUL on 15/06/17.
@@ -97,16 +98,20 @@ class FoodItemWidgetFactory implements RemoteViewsService.RemoteViewsFactory{
         RemoteViews rv = new RemoteViews(mContext.getPackageName(), R.layout.widget_list_item);
 
         FoodItem foodItem = mFoodItem.get(position);
-
-        rv.setTextViewText(R.id.widget_tv_name, foodItem.getName());
-        rv.setTextViewText(R.id.widget_tv_servings, foodItem.getServings());
-        rv.setImageViewUri(R.id.widget_iv_chef,ImageResources.convertUri(images[position]));
+        rv.setTextViewText(R.id.widget_tv_iname, foodItem.getName());
+        String ingredients = "";
+        for (Ingredient ingredient : foodItem.getIngredients()) {
+            ingredients += " - " + ingredient.getIngredient() + "\n";
+        }
+        rv.setTextViewText(R.id.widget_tv_ingredients,ingredients);
         Bundle extras = new Bundle();
         extras.putParcelable(mContext.getString(R.string.recipe),foodItem);
         Intent fillIntent = new Intent();
         fillIntent.putExtras(extras);
-        rv.setOnClickFillInIntent(R.id.widget_item,fillIntent);
+        rv.setOnClickFillInIntent(R.id.widget_layout_item,fillIntent);
         return rv;
+
+
     }
 
     @Override

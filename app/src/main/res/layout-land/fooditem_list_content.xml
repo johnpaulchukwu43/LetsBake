@@ -72,13 +72,15 @@
                 tools:text="Servings :" />
 
             <Button
+                android:id="@+id/btn_exp"
                 android:layout_width="85dp"
                 android:layout_height="40dp"
+                android:background="@color/colorAccent"
                 android:layout_alignParentEnd="true"
                 android:layout_marginRight="@dimen/fab_margin"
                 android:layout_marginTop="5dp"
-                android:background="@color/colorAccent"
-                android:text="Explore" />
+                android:text="Explore"
+                />
         </RelativeLayout>
     </LinearLayout>
 

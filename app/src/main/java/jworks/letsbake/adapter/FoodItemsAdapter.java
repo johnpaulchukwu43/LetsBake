@@ -89,9 +89,14 @@ public class FoodItemsAdapter
             if (!recipie.isEmpty()) {
                 foodname.setText(recipie.get(position).getName());
                 foodservings.setText(recipie.get(position).getServings());
-               uri = convertUri(Images[position]);
+                if(!recipie.get(position).getImage().isEmpty()){
+                    Glide.with(ctx).load(recipie.get(position).getImage()).into(foodimage);
+                }
+                else{
+                    uri = convertUri(Images[position]);
+                    Glide.with(ctx).load(uri).into(foodimage);
+                }
 
-                Glide.with(ctx).load(uri).into(foodimage);
             }
 
         }
